@@ -34,6 +34,8 @@
         
         self.title = self.detailItem.title;
         self.detailDescriptionLabel.text = self.detailItem.synposis;
+        self.movieTitleLabel.text = self.detailItem.title;
+        
         
         NSURL *imageURL = [NSURL URLWithString:self.detailItem.poster];
         NSData *imageData = [NSData dataWithContentsOfURL:imageURL];

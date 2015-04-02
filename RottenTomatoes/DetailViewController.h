@@ -15,6 +15,7 @@
 @property (strong, nonatomic) Movies *detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *moviePoster;
+@property (strong, nonatomic) IBOutlet UILabel *movieTitleLabel;
 
 @end
 
