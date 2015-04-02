@@ -64,7 +64,18 @@
                             <outlet property="delegate" destination="u2h-XH-dmO" id="Kg7-fh-cPy"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="New Netflix Releases" id="AuR-Cn-hjs"/>
+                    <navigationItem key="navigationItem" title="New Netflix Releases" id="AuR-Cn-hjs">
+                        <barButtonItem key="leftBarButtonItem" title="Big" id="9NK-Gg-urt">
+                            <connections>
+                                <action selector="didChangeSize:" destination="u2h-XH-dmO" id="twS-lO-HO7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Small" id="jwX-DU-QSS">
+                            <connections>
+                                <action selector="didChangeSizeSmall:" destination="u2h-XH-dmO" id="zgB-Hs-m50"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5v2-na-ZiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

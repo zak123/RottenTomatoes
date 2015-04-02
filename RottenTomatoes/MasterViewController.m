@@ -13,6 +13,9 @@
 @interface MasterViewController () <RottenTomatoesManagerDelegate> {
     NSArray *_movies;
     RottenTomatoesManager *_manager;
+    UICollectionViewFlowLayout *bigLayout;
+    UICollectionViewFlowLayout *smallLayout;
+    
 }
 @end
 
@@ -31,11 +34,45 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
+    smallLayout = [[UICollectionViewFlowLayout alloc]init];
+    smallLayout.itemSize = CGSizeMake(100,100);
+    [self.collectionView setCollectionViewLayout:smallLayout];
+    
     [self startFetchingMovies];
+    
+    
+
 
     // main implementation
 }
 
+- (IBAction)didChangeSize:(id)sender {
+    bigLayout = [[UICollectionViewFlowLayout alloc]init];
+    bigLayout.itemSize = CGSizeMake(300,300);
+    bigLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.collectionView.backgroundColor = [UIColor blackColor];
+            self.collectionView.collectionViewLayout = bigLayout;
+        
+        
+    }];
+
+}
+- (IBAction)didChangeSizeSmall:(id)sender {
+    smallLayout = [[UICollectionViewFlowLayout alloc]init];
+    smallLayout.itemSize = CGSizeMake(100,100);
+    smallLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.collectionView.backgroundColor = [UIColor blackColor];
+        self.collectionView.collectionViewLayout = smallLayout;
+        
+        
+    }];
+}
 
 -(void)startFetchingMovies {
     [_manager fetchMovies];
