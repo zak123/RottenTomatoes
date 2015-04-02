@@ -77,12 +77,35 @@
 //    [cell.scoreLabel setText:movie.score];
     
     
-    NSURL *imageURL = [NSURL URLWithString:movie.poster];
-    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-    cell.movieImage.image = [UIImage imageWithData:imageData];
+    NSURL *url = [NSURL URLWithString:movie.poster];
+    [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, NSData *data) {
+        if (succeeded) {
+            cell.movieImage.image = [[UIImage alloc] initWithData:data];
+        }
+    }];
     
     return cell;
+}
+
     
+//    NSURL *imageURL = [NSURL URLWithString:movie.poster];
+//    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+//    cell.movieImage.image = [UIImage imageWithData:imageData];
+//    
+//    return cell;
+//    
+//}
+
+- (void)downloadImageWithURL:(NSURL *)url completionBlock:(void (^)(BOOL succeeded, NSData *data))completionBlock
+{
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        if (!error) {
+            completionBlock(YES, data);
+        } else {
+            completionBlock(NO, nil);
+        }
+    }];
 }
 
 

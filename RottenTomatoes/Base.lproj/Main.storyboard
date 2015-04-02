@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="-148" y="64"/>
         </scene>
-        <!--Master View Controller-->
+        <!--New Netflix Releases-->
         <scene sceneID="ib0-XX-mYw">
             <objects>
                 <collectionViewController id="u2h-XH-dmO" customClass="MasterViewController" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                             <outlet property="delegate" destination="u2h-XH-dmO" id="Kg7-fh-cPy"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="AuR-Cn-hjs"/>
+                    <navigationItem key="navigationItem" title="New Netflix Releases" id="AuR-Cn-hjs"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5v2-na-ZiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
