@@ -45,7 +45,21 @@
         
     }
 }
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    WebViewController *webController = [[WebViewController alloc] init];
+    
+    if ([[segue identifier] isEqualToString:@"webPush"]) {
+        NSString *urlstr=self.detailItem.webURL;
+        NSString *viewTitle = self.detailItem.title;
+        webController = [segue destinationViewController];
+        webController.urlstr = urlstr;
+        webController.viewTitle = viewTitle;
+// pass url to webview
+    
+    
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.

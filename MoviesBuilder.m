@@ -36,6 +36,7 @@
         movie.synposis = movieDic[@"synopsis"][@"text"];
         movie.poster = movieDic[@"poster"][@"src"];
         movie.score = movieDic[@"score"];
+        movie.webURL = movieDic[@"poster"][@"href"];
         
         
         

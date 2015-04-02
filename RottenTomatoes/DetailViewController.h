@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Movies.h"
+#import "WebViewController.h"
 
 @interface DetailViewController : UIViewController
 

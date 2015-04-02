@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B68A81C51ACD1DE90067ACB1 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68A81C41ACD1DE90067ACB1 /* WebViewController.m */; };
 		B68C5E241ACC99F90033D2B8 /* RottenTomatoesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B68C5E231ACC99F90033D2B8 /* RottenTomatoesManager.m */; };
 		B68C5E2A1ACC9BE00033D2B8 /* MoviesBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B68C5E291ACC9BE00033D2B8 /* MoviesBuilder.m */; };
 		B68C5E2D1ACC9F500033D2B8 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B68C5E2C1ACC9F500033D2B8 /* DetailCell.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B68A81C31ACD1DE90067ACB1 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		B68A81C41ACD1DE90067ACB1 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		B68C5E1E1ACC99950033D2B8 /* RottenTomatoesManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RottenTomatoesManagerDelegate.h; sourceTree = "<group>"; };
 		B68C5E221ACC99F90033D2B8 /* RottenTomatoesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RottenTomatoesManager.h; sourceTree = SOURCE_ROOT; };
 		B68C5E231ACC99F90033D2B8 /* RottenTomatoesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RottenTomatoesManager.m; sourceTree = SOURCE_ROOT; };
@@ -82,13 +85,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B68A81C61ACD1FFD0067ACB1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B6B78E7C1ACC959B00528B8C /* RottenTomatoesCommunicatorDelegate.h */,
+				B6B78E7D1ACC95DA00528B8C /* RottenTomatoesCommunicator.h */,
+				B6B78E7E1ACC95DA00528B8C /* RottenTomatoesCommunicator.m */,
+				B68C5E1E1ACC99950033D2B8 /* RottenTomatoesManagerDelegate.h */,
+				B68C5E221ACC99F90033D2B8 /* RottenTomatoesManager.h */,
+				B68C5E231ACC99F90033D2B8 /* RottenTomatoesManager.m */,
+				B68C5E281ACC9BE00033D2B8 /* MoviesBuilder.h */,
+				B68C5E291ACC9BE00033D2B8 /* MoviesBuilder.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		B68C5E2E1ACCA7D20033D2B8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B68C5E2B1ACC9F500033D2B8 /* DetailCell.h */,
+				B68C5E2C1ACC9F500033D2B8 /* DetailCell.m */,
 				B6B78E551ACC92BB00528B8C /* MasterViewController.h */,
 				B6B78E561ACC92BB00528B8C /* MasterViewController.m */,
 				B6B78E581ACC92BB00528B8C /* DetailViewController.h */,
 				B6B78E591ACC92BB00528B8C /* DetailViewController.m */,
+				B68A81C31ACD1DE90067ACB1 /* WebViewController.h */,
+				B68A81C41ACD1DE90067ACB1 /* WebViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -123,19 +145,10 @@
 		B6B78E4A1ACC92BB00528B8C /* RottenTomatoes */ = {
 			isa = PBXGroup;
 			children = (
-				B6B78E7C1ACC959B00528B8C /* RottenTomatoesCommunicatorDelegate.h */,
-				B6B78E7D1ACC95DA00528B8C /* RottenTomatoesCommunicator.h */,
-				B6B78E7E1ACC95DA00528B8C /* RottenTomatoesCommunicator.m */,
 				B68C5E2F1ACCA7DB0033D2B8 /* Model */,
 				B68C5E2E1ACCA7D20033D2B8 /* Controller */,
-				B68C5E281ACC9BE00033D2B8 /* MoviesBuilder.h */,
-				B68C5E291ACC9BE00033D2B8 /* MoviesBuilder.m */,
-				B68C5E1E1ACC99950033D2B8 /* RottenTomatoesManagerDelegate.h */,
-				B68C5E221ACC99F90033D2B8 /* RottenTomatoesManager.h */,
-				B68C5E231ACC99F90033D2B8 /* RottenTomatoesManager.m */,
+				B68A81C61ACD1FFD0067ACB1 /* Helpers */,
 				B6B78E5B1ACC92BB00528B8C /* Main.storyboard */,
-				B68C5E2B1ACC9F500033D2B8 /* DetailCell.h */,
-				B68C5E2C1ACC9F500033D2B8 /* DetailCell.m */,
 				B6B78E5E1ACC92BB00528B8C /* Images.xcassets */,
 				B6B78E601ACC92BB00528B8C /* LaunchScreen.xib */,
 				B6B78E521ACC92BB00528B8C /* RottenTomatoes.xcdatamodeld */,
@@ -274,6 +287,7 @@
 			files = (
 				B6B78E7F1ACC95DA00528B8C /* RottenTomatoesCommunicator.m in Sources */,
 				B6B78E791ACC941700528B8C /* Movies.m in Sources */,
+				B68A81C51ACD1DE90067ACB1 /* WebViewController.m in Sources */,
 				B68C5E2A1ACC9BE00033D2B8 /* MoviesBuilder.m in Sources */,
 				B6B78E5A1ACC92BB00528B8C /* DetailViewController.m in Sources */,
 				B6B78E571ACC92BB00528B8C /* MasterViewController.m in Sources */,

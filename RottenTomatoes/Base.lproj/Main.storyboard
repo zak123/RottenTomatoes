@@ -55,7 +55,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="movieImage" destination="0Ql-ug-hfN" id="D55-Pp-qRj"/>
-                                    <segue destination="Ah7-4n-0Wa" kind="showDetail" identifier="showDetail" id="tsL-TB-miJ"/>
+                                    <segue destination="Ah7-4n-0Wa" kind="show" identifier="showDetail" id="Upx-T7-h0W"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -123,16 +123,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCU-l3-22t">
-                                <rect key="frame" x="280" y="112" width="40" height="30"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didClose:" destination="Ah7-4n-0Wa" eventType="touchUpInside" id="5QO-2T-p5J"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acb-t2-vKr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acb-t2-vKr">
                                 <rect key="frame" x="274" y="77" width="53" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -144,11 +135,8 @@
                             <constraint firstItem="BeG-kJ-TL9" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="28" id="0Go-r0-3e9"/>
                             <constraint firstItem="Lei-5M-9Gs" firstAttribute="top" secondItem="BeG-kJ-TL9" secondAttribute="bottom" constant="50" id="6fQ-qk-3qE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Lei-5M-9Gs" secondAttribute="trailing" constant="8" id="82g-gG-kVs"/>
-                            <constraint firstAttribute="centerX" secondItem="VCU-l3-22t" secondAttribute="centerX" id="8QA-mV-PGn"/>
                             <constraint firstItem="Acb-t2-vKr" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="57" id="CKL-iu-6gy"/>
                             <constraint firstAttribute="centerY" secondItem="BeG-kJ-TL9" secondAttribute="centerY" id="IJH-k4-mqC"/>
-                            <constraint firstItem="VCU-l3-22t" firstAttribute="top" secondItem="Acb-t2-vKr" secondAttribute="bottom" constant="8.5" id="LwE-48-f6R"/>
-                            <constraint firstItem="BeG-kJ-TL9" firstAttribute="top" secondItem="VCU-l3-22t" secondAttribute="bottom" constant="8" id="UoQ-6y-Aac"/>
                             <constraint firstAttribute="centerX" secondItem="BeG-kJ-TL9" secondAttribute="centerX" id="bdt-RH-YjX"/>
                             <constraint firstItem="Lei-5M-9Gs" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" constant="8" id="edk-Ox-wit"/>
                             <constraint firstItem="BeG-kJ-TL9" firstAttribute="centerX" secondItem="Lei-5M-9Gs" secondAttribute="centerX" id="eeJ-Iu-iNF"/>
@@ -163,7 +151,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="NRM-kq-bUM">
+                            <connections>
+                                <segue destination="xNe-Xp-FpK" kind="show" identifier="webPush" id="Xn8-ii-DRK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="Lei-5M-9Gs" id="sCT-F7-F6f"/>
                         <outlet property="moviePoster" destination="BeG-kJ-TL9" id="a2h-0x-ZOS"/>
@@ -172,7 +166,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1339" y="61.25"/>
+            <point key="canvasLocation" x="1617" y="-29"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="iVO-Fl-wXM">
+            <objects>
+                <viewController id="xNe-Xp-FpK" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ran-1Q-2Vg"/>
+                        <viewControllerLayoutGuide type="bottom" id="W4F-A0-h6k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nof-z2-V6j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9P-9E-Ls4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q9P-9E-Ls4" firstAttribute="top" secondItem="Nof-z2-V6j" secondAttribute="top" id="38K-qi-kUg"/>
+                            <constraint firstItem="W4F-A0-h6k" firstAttribute="top" secondItem="Q9P-9E-Ls4" secondAttribute="bottom" id="Oez-Jm-Coo"/>
+                            <constraint firstAttribute="trailing" secondItem="Q9P-9E-Ls4" secondAttribute="trailing" id="QGz-1D-6NZ"/>
+                            <constraint firstItem="Q9P-9E-Ls4" firstAttribute="leading" secondItem="Nof-z2-V6j" secondAttribute="leading" id="bGw-wS-d0B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="WebView" destination="Q9P-9E-Ls4" id="u34-xr-aIP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxj-TV-ktn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2286" y="7"/>
         </scene>
     </scenes>
 </document>
