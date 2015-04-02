@@ -14,7 +14,7 @@
 #import "RottenTomatoesManager.h"
 #import "RottenTomatoesCommunicator.h"
 
-@interface MasterViewController : UITableViewController 
+@interface MasterViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end
 

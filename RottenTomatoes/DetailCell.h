@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailCell : UITableViewCell
+@interface DetailCell : UICollectionViewCell
 @property (strong, nonatomic) IBOutlet UILabel *movieNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *movieSynposisLabel;
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *movieImage;
 
 @end

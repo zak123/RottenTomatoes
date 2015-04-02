@@ -24,6 +24,9 @@
         [self configureView];
     }
 }
+- (IBAction)didClose:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)configureView {
     // Update the user interface for the detail item.

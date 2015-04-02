@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B65FF5B01ACCDCC00098A60F /* ZackCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B65FF5AF1ACCDCC00098A60F /* ZackCollectionViewController.m */; };
 		B68C5E241ACC99F90033D2B8 /* RottenTomatoesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B68C5E231ACC99F90033D2B8 /* RottenTomatoesManager.m */; };
 		B68C5E2A1ACC9BE00033D2B8 /* MoviesBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B68C5E291ACC9BE00033D2B8 /* MoviesBuilder.m */; };
 		B68C5E2D1ACC9F500033D2B8 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B68C5E2C1ACC9F500033D2B8 /* DetailCell.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B65FF5AE1ACCDCC00098A60F /* ZackCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZackCollectionViewController.h; sourceTree = "<group>"; };
+		B65FF5AF1ACCDCC00098A60F /* ZackCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZackCollectionViewController.m; sourceTree = "<group>"; };
 		B68C5E1E1ACC99950033D2B8 /* RottenTomatoesManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RottenTomatoesManagerDelegate.h; sourceTree = "<group>"; };
 		B68C5E221ACC99F90033D2B8 /* RottenTomatoesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RottenTomatoesManager.h; sourceTree = SOURCE_ROOT; };
 		B68C5E231ACC99F90033D2B8 /* RottenTomatoesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RottenTomatoesManager.m; sourceTree = SOURCE_ROOT; };
@@ -85,6 +88,8 @@
 		B68C5E2E1ACCA7D20033D2B8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B65FF5AE1ACCDCC00098A60F /* ZackCollectionViewController.h */,
+				B65FF5AF1ACCDCC00098A60F /* ZackCollectionViewController.m */,
 				B6B78E551ACC92BB00528B8C /* MasterViewController.h */,
 				B6B78E561ACC92BB00528B8C /* MasterViewController.m */,
 				B6B78E581ACC92BB00528B8C /* DetailViewController.h */,
@@ -282,6 +287,7 @@
 				B68C5E241ACC99F90033D2B8 /* RottenTomatoesManager.m in Sources */,
 				B6B78E541ACC92BB00528B8C /* RottenTomatoes.xcdatamodeld in Sources */,
 				B6B78E4E1ACC92BB00528B8C /* main.m in Sources */,
+				B65FF5B01ACCDCC00098A60F /* ZackCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
