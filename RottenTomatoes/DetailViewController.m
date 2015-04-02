@@ -37,9 +37,11 @@
         self.movieTitleLabel.text = self.detailItem.title;
         
         
-        NSURL *imageURL = [NSURL URLWithString:self.detailItem.poster];
-        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-        self.moviePoster.image = [UIImage imageWithData:imageData];
+//        NSURL *imageURL = [NSURL URLWithString:self.detailItem.poster];
+//        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+//        self.moviePoster.image = [UIImage imageWithData:imageData];
+        
+        self.moviePoster.image = self.detailItem.parsedImage;
         
     }
 }

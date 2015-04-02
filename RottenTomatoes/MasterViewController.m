@@ -52,6 +52,7 @@
     bigLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     
+    
     [UIView animateWithDuration:0.3 animations:^{
         self.collectionView.backgroundColor = [UIColor blackColor];
             self.collectionView.collectionViewLayout = bigLayout;
@@ -117,7 +118,9 @@
     NSURL *url = [NSURL URLWithString:movie.poster];
     [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, NSData *data) {
         if (succeeded) {
-            cell.movieImage.image = [[UIImage alloc] initWithData:data];
+            
+            movie.parsedImage = [[UIImage alloc] initWithData:data];
+            cell.movieImage.image = movie.parsedImage;
         }
     }];
     
