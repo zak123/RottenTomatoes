@@ -72,6 +72,7 @@
     Movies *movie = _movies[indexPath.row];
     [cell.movieNameLabel setText:movie.title];
     [cell.movieSynposisLabel setText:movie.synposis];
+    [cell.scoreLabel setText:movie.score];
 //    [cell.movieRatingLabel setText:movie.mpaa_rating];
     
     

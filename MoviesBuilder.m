@@ -35,6 +35,8 @@
         movie.title = movieDic[@"title"];
         movie.synposis = movieDic[@"synopsis"][@"text"];
         movie.poster = movieDic[@"poster"][@"src"];
+        movie.score = movieDic[@"score"];
+        
         
         
         [movies addObject:movie];

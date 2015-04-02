@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *synposis;
 @property (nonatomic, strong) NSString *poster;
+@property (nonatomic, strong) NSString *score;
 
 
 
