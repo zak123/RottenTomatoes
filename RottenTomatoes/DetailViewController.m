@@ -28,7 +28,14 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        
+        self.title = self.detailItem.title;
+        self.detailDescriptionLabel.text = self.detailItem.synposis;
+        
+        NSURL *imageURL = [NSURL URLWithString:self.detailItem.poster];
+        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+        self.moviePoster.image = [UIImage imageWithData:imageData];
+        
     }
 }
 

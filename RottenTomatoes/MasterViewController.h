@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "DetailViewController.h"
+#import "DetailCell.h"
+#import "Movies.h"
+#import "RottenTomatoesManager.h"
+#import "RottenTomatoesCommunicator.h"
 
-@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
-
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
+@interface MasterViewController : UITableViewController 
 
 @end
 
